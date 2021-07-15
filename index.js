@@ -176,16 +176,30 @@
 // showPrimes(37); 
 
 // address
+// let address = {
+//     street: '8th',
+//     city: 'JC',
+//     zipCode: '57409'
+// }
+
+// function showAddress(address) {
+//     for(let property in address)
+//         console.log(property, address[property]);
+// }
+// showAddress(address);
+
+//Constructor
 function Address(street, city, zipCode) {
     this.street = street;
     this.city = city;
     this.zipCode = zipCode;
 }
 
-function showAddress(address) {
-    for(let property in address)
-        console.log(property, address[property]);
-}
-
-let address = new Address('8th', 'JC', 97448);
-showAddress(address);
+// Factory
+// function createAddress(street, city, zipCode) {
+//     return {
+//         street,
+//         city,
+//         zipCode
+//     }
+// }
