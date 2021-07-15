@@ -80,14 +80,32 @@
 
 // showNumbers(10);
 
-function countTruthy(array) {
-    let count = 0;
-    for(element of array) {
-        if(element)
-            ++count;
-    }
-    console.log(count);
-}
+// count truthy
+// function countTruthy(array) {
+//     let count = 0;
+//     for(element of array) {
+//         if(element)
+//             ++count;
+//     }
+//     console.log(count);
+// }
 
-const array = [0, 1, 2, 3, '', 'name', null, true, NaN, false];
-countTruthy(array);
+// const array = [0, 1, 2, 3, '', 'name', null, true, NaN, false];
+// countTruthy(array);
+
+// string properties
+// function showProperties(obj) {
+//     for(property in obj) {
+//         if(typeof(obj[property]) === 'string')
+//             console.log(property, obj[property]);
+//     }
+// }
+
+// const movie = {
+//     title: 'a',
+//     releaseYear: 2018,
+//     rating: 4.5,
+//     director: 'b'
+// }
+
+// showProperties(movie);
