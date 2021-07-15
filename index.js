@@ -149,14 +149,28 @@
 // console.log(calculateGrade(marks));
 
 //stars
-function showStars(rows) {
-    let stars = '';
-    for(let ii = 0; ii < rows; ++ii) {
-        for(let jj = 0; jj <= ii; ++jj)
-            stars += '*';
-        console.log(stars);
-        stars = '';
+// function showStars(rows) {
+//     let stars = '';
+//     for(let ii = 0; ii < rows; ++ii) {
+//         for(let jj = 0; jj <= ii; ++jj)
+//             stars += '*';
+//         console.log(stars);
+//         stars = '';
+//     }
+// }
+
+// showStars(4);
+
+function showPrimes(limit) {
+    for(let ii = 2; ii <= limit; ++ii) {
+        let isPrime = true;
+        for(let jj = 2; jj < ii && isPrime; ++jj) {
+            if(ii % jj === 0)
+                isPrime = false;
+        }
+        if(isPrime)
+            console.log(ii);
     }
 }
 
-showStars(4);
+showPrimes(37);
