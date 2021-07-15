@@ -203,3 +203,24 @@ function Address(street, city, zipCode) {
 //         zipCode
 //     }
 // }
+
+let address1 = new Address('a', 'b', 'c');
+let address2 = new Address('a', 'b', 'c');
+
+function areEqual(address1, address2) {
+    let ret = true;
+    for(property in address1)
+        if(address1[property] !== address2[property])
+            ret = false;
+    for(property in address2)
+        if(address1[property] !== address2[property])
+            ret = false;
+    return ret;
+}
+
+function areSame(address1, address2) {
+    return address1 === address2;
+}
+
+console.log(areEqual(address1, address2));
+console.log(areSame(address1, address2));
