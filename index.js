@@ -1,4 +1,10 @@
-let x = 10;
-let y = 3;
+// Swapping Variables
+let a = 'red';
+let b = 'blue';
 
-console.log(x + y);
+let c = 'red';
+a = b;
+b = c;
+
+console.log(a);
+console.log(b);
