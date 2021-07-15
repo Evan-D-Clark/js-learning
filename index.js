@@ -52,20 +52,30 @@
 // console.log(fizzBuzz('foobar'));
 
 // check speed
-function checkSpeed(speed) {
-    const speedLimit = 70;
-    const kmPerPoint = 5;
-    let ret = 'Ok';
-    if(speed >= speedLimit + kmPerPoint) {
-        ret = Math.floor((speed - speedLimit) / kmPerPoint);
-        if(ret >= 12)
-            ret = 'Liscense suspended';
+// function checkSpeed(speed) {
+//     const speedLimit = 70;
+//     const kmPerPoint = 5;
+//     let ret = 'Ok';
+//     if(speed >= speedLimit + kmPerPoint) {
+//         ret = Math.floor((speed - speedLimit) / kmPerPoint);
+//         if(ret >= 12)
+//             ret = 'Liscense suspended';
+//     }
+//     return ret;
+// }
+
+// console.log(checkSpeed(70));
+// console.log(checkSpeed(74));
+// console.log(checkSpeed(45));
+// console.log(checkSpeed(90));
+// console.log(checkSpeed(180));
+
+// show numbers
+function showNumbers(limit) {
+    for(let ii = 0; ii <= limit; ++ii) {
+        message = (ii % 2) === 0 ? 'EVEN' : 'ODD';
+        console.log(ii, message);
     }
-    return ret;
 }
 
-console.log(checkSpeed(70));
-console.log(checkSpeed(74));
-console.log(checkSpeed(45));
-console.log(checkSpeed(90));
-console.log(checkSpeed(180));
+showNumbers(10);
