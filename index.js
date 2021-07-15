@@ -123,27 +123,40 @@
 // console.log(sumOf3sand5s(15));
 
 // grade
-function calculateAverage(array) {
-    let average = 0;
-    for(value of array) {
-        average += value;
+// function calculateAverage(array) {
+//     let average = 0;
+//     for(value of array) {
+//         average += value;
+//     }
+//     average /= array.length;
+//     return average;
+// }
+// function calculateGrade(marks) {
+//     const average = calculateAverage(marks);
+//     if(average < 60)
+//         return 'F';
+//     if(average < 70)
+//         return 'D';
+//     if(average < 80)
+//         return 'C';
+//     if(average < 90)
+//         return 'B';
+//     return 'A';
+// }
+
+// const marks = [80, 80, 100];
+
+// console.log(calculateGrade(marks));
+
+//stars
+function showStars(rows) {
+    let stars = '';
+    for(let ii = 0; ii < rows; ++ii) {
+        for(let jj = 0; jj <= ii; ++jj)
+            stars += '*';
+        console.log(stars);
+        stars = '';
     }
-    average /= array.length;
-    return average;
-}
-function calculateGrade(marks) {
-    const average = calculateAverage(marks);
-    if(average < 60)
-        return 'F';
-    if(average < 70)
-        return 'D';
-    if(average < 80)
-        return 'C';
-    if(average < 90)
-        return 'B';
-    return 'A';
 }
 
-const marks = [80, 80, 100];
-
-console.log(calculateGrade(marks));
+showStars(4);
