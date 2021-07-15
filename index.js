@@ -109,3 +109,14 @@
 // }
 
 // showProperties(movie);
+
+function sumOf3sand5s(limit) {
+    let sum = 0;
+    for(let ii = 3; ii <= limit; ii += 3)
+        sum += ii;
+    for(let ii = 5; ii <= limit; ii += 5)
+        sum += ii;
+    return sum;
+}
+
+console.log(sumOf3sand5s(15));
