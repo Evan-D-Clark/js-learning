@@ -18,10 +18,36 @@
 // console.log(maxOfTwoNumbers(10, 5));
 // console.log(maxOfTwoNumbers(5, 5));
 
-function isLandscape(width, height) {
-    return width > height;
+// is landscape
+// function isLandscape(width, height) {
+//     return width > height;
+// }
+
+// console.log(isLandscape(5, 10));
+// console.log(isLandscape(10, 5));
+// console.log(isLandscape(10, 10));
+
+//fizzbuzz
+
+function fizzBuzz(input) {
+    let ret = input;
+    if(typeof input !== 'number')
+        ret = 'Not a number'
+    else
+    {
+        if(input % 3 === 0 && input % 5 === 0)
+            ret = 'FizzBuzz';
+        else if(input % 3 === 0)
+            ret =  'Fizz';
+        else if(input % 5 === 0)
+            ret =  'Buzz';
+    }
+    return ret;
 }
 
-console.log(isLandscape(5, 10));
-console.log(isLandscape(10, 5));
-console.log(isLandscape(10, 10));
+console.log(fizzBuzz(30));
+console.log(fizzBuzz(9));
+console.log(fizzBuzz(25));
+console.log(fizzBuzz(82));
+console.log(fizzBuzz(true));
+console.log(fizzBuzz('foobar'));
