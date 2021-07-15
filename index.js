@@ -161,16 +161,31 @@
 
 // showStars(4);
 
-function showPrimes(limit) {
-    for(let ii = 2; ii <= limit; ++ii) {
-        let isPrime = true;
-        for(let jj = 2; jj < ii && isPrime; ++jj) {
-            if(ii % jj === 0)
-                isPrime = false;
-        }
-        if(isPrime)
-            console.log(ii);
-    }
+// function showPrimes(limit) {
+//     for(let ii = 2; ii <= limit; ++ii) {
+//         let isPrime = true;
+//         for(let jj = 2; jj < ii && isPrime; ++jj) {
+//             if(ii % jj === 0)
+//                 isPrime = false;
+//         }
+//         if(isPrime)
+//             console.log(ii);
+//     }
+// }
+
+// showPrimes(37); 
+
+// address
+function Address(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
 }
 
-showPrimes(37);
+function showAddress(address) {
+    for(let property in address)
+        console.log(property, address[property]);
+}
+
+let address = new Address('8th', 'JC', 97448);
+showAddress(address);
