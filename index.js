@@ -71,11 +71,23 @@
 // console.log(checkSpeed(180));
 
 // show numbers
-function showNumbers(limit) {
-    for(let ii = 0; ii <= limit; ++ii) {
-        message = (ii % 2) === 0 ? 'EVEN' : 'ODD';
-        console.log(ii, message);
+// function showNumbers(limit) {
+//     for(let ii = 0; ii <= limit; ++ii) {
+//         message = (ii % 2) === 0 ? 'EVEN' : 'ODD';
+//         console.log(ii, message);
+//     }
+// }
+
+// showNumbers(10);
+
+function countTruthy(array) {
+    let count = 0;
+    for(element of array) {
+        if(element)
+            ++count;
     }
+    console.log(count);
 }
 
-showNumbers(10);
+const array = [0, 1, 2, 3, '', 'name', null, true, NaN, false];
+countTruthy(array);
