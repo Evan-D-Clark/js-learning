@@ -30,3 +30,18 @@
 // const numbers = [1,2,3,4];
 // console.log(Includes(numbers, 1.5));
 
+// except
+function except(array, excluded) {
+    const ret = [];
+    for(element of array) {
+        let include = true;
+        for(exclusion of excluded)
+            if(element === exclusion)
+                include = false;
+        if(include) ret.push(element);
+    }
+    return ret;
+}
+
+const numbers = [1,2,3,4,1,1];
+console.log(except(numbers, [3,4,2]));
