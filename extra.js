@@ -9,11 +9,24 @@
 // }
 
 // array from range
-function ArrayFromRange(start, end) {
-    const ret = [];
-    for(let ii = start; ii <= end; ++ii)
-        ret.push(ii);
-    return ret;
-}
+// function ArrayFromRange(start, end) {
+//     const ret = [];
+//     for(let ii = start; ii <= end; ++ii)
+//         ret.push(ii);
+//     return ret;
+// }
 
-console.log(ArrayFromRange(4, 10));
+// console.log(ArrayFromRange(4, 10));
+
+// includes
+// function Includes(numberArray, value) {
+//     for(element of numberArray) {
+//         if(element === value)
+//             return true;
+//     }
+//     return false;
+// }
+
+// const numbers = [1,2,3,4];
+// console.log(Includes(numbers, 1.5));
+
