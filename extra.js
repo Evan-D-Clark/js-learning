@@ -34,11 +34,8 @@
 function except(array, excluded) {
     const ret = [];
     for(element of array) {
-        let include = true;
-        for(exclusion of excluded)
-            if(element === exclusion)
-                include = false;
-        if(include) ret.push(element);
+        if(!excluded.includes(element))
+            ret.push(element);
     }
     return ret;
 }
