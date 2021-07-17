@@ -64,11 +64,15 @@
 
 // count occurences
 function countOccurences(array, searchElement) {
-    let ret = 0;
-    array.forEach(element => 
-        { if(element === searchElement) ++ret });
-    return ret;
+    // let ret = 0;
+    // array.forEach(element => 
+    //     { if(element === searchElement) ++ret });
+    // return ret;
+    return array.reduce((accumulator, current) => {
+        const occurance = (current === searchElement) ? 1 : 0;
+        return accumulator + occurance;
+    }, 0);
 }
 
-const numbers = [2, 3, 4, 5];
+const numbers = [2, 3, 4, 5, 1, 1, 1];
 console.log(countOccurences(numbers, 1));
