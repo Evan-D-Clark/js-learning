@@ -44,20 +44,31 @@
 // console.log(except(numbers, [3,4,2]));
 
 // move
-function move(array, index, offset) {
-    const ret = [...array];
-    if(index < 0 || index > array.length - 1)
-        console.error('Invalid index.');
-    else if(index + offset > array.length || index + offset < 0)
-        console.error('Invalid offset');
-    else {
-        const value = ret[index];
-        ret.splice(index, 1);
-        ret.splice(index + offset, 0, value);
-    }
+// function move(array, index, offset) {
+//     const ret = [...array];
+//     if(index < 0 || index > array.length - 1)
+//         console.error('Invalid index.');
+//     else if(index + offset > array.length || index + offset < 0)
+//         console.error('Invalid offset');
+//     else {
+//         const value = ret[index];
+//         ret.splice(index, 1);
+//         ret.splice(index + offset, 0, value);
+//     }
+//     return ret;
+// }
+
+// const numbers = [1,2,3,4,5];
+// console.log(numbers);
+// console.log(move(numbers, 4, -2));
+
+// count occurences
+function countOccurences(array, searchElement) {
+    let ret = 0;
+    array.forEach(element => 
+        { if(element === searchElement) ++ret });
     return ret;
 }
 
-const numbers = [1,2,3,4,5];
-console.log(numbers);
-console.log(move(numbers, 4, -2));
+const numbers = [2, 3, 4, 5];
+console.log(countOccurences(numbers, 1));
