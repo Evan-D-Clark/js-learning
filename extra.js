@@ -78,11 +78,37 @@
 // console.log(countOccurences(numbers, 1));
 
 // get max
-function GetMax(array) {
-    if(array.length === 0)
-        return undefined;
-    return array.reduce((accumulator, occurance) => 
-        (accumulator > occurance) ? accumulator : occurance);
+// function GetMax(array) {
+//     if(array.length === 0)
+//         return undefined;
+//     return array.reduce((accumulator, occurance) => 
+//         (accumulator > occurance) ? accumulator : occurance);
+// }
+// const numbers = [2, 3, 4, 5, 1, 6, 1];
+// console.log(GetMax(numbers));
+
+// movies
+// function OrderByRating(movies) {
+//     console.log(movies.filter(m => m.year === 2018 && m.rating >= 4)
+//     .sort((a, b) => a.rating - b.rating)
+//     .reverse()
+//     .map(m => m.title));
+// }
+
+// const movies = [
+//     { title: 'a', year: 2018, rating: 4.5 },
+//     { title: 'b', year: 2018, rating: 4.7 },
+//     { title: 'c', year: 2018, rating: 3 },
+//     { title: 'd', year: 2017, rating: 4.5 }
+// ];
+
+// OrderByRating(movies);
+
+// sum of arguments
+function sum(...args) {
+    if(args.length === 1 && Array.isArray(args[0]))
+        args = args[0];
+    return args.reduce((a, b) => a + b);
 }
-const numbers = [2, 3, 4, 5, 1, 6, 1];
-console.log(GetMax(numbers));
+
+console.log(sum([1,2,3,4]));
