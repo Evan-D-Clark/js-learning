@@ -105,10 +105,20 @@
 // OrderByRating(movies);
 
 // sum of arguments
-function sum(...args) {
-    if(args.length === 1 && Array.isArray(args[0]))
-        args = args[0];
-    return args.reduce((a, b) => a + b);
-}
+// function sum(...args) {
+//     if(args.length === 1 && Array.isArray(args[0]))
+//         args = args[0];
+//     return args.reduce((a, b) => a + b);
+// }
 
-console.log(sum([1,2,3,4]));
+// console.log(sum([1,2,3,4]));
+
+// area of circle
+// const circle = {
+//     radius: 2,
+//     get area() {
+//         return this.radius**2 * Math.PI;
+//     }
+// }
+// console.log(circle.area);
+
