@@ -63,16 +63,26 @@
 // console.log(move(numbers, 4, -2));
 
 // count occurences
-function countOccurences(array, searchElement) {
-    // let ret = 0;
-    // array.forEach(element => 
-    //     { if(element === searchElement) ++ret });
-    // return ret;
-    return array.reduce((accumulator, current) => {
-        const occurance = (current === searchElement) ? 1 : 0;
-        return accumulator + occurance;
-    }, 0);
-}
+// function countOccurences(array, searchElement) {
+//     // let ret = 0;
+//     // array.forEach(element => 
+//     //     { if(element === searchElement) ++ret });
+//     // return ret;
+//     return array.reduce((accumulator, current) => {
+//         const occurance = (current === searchElement) ? 1 : 0;
+//         return accumulator + occurance;
+//     }, 0);
+// }
 
-const numbers = [2, 3, 4, 5, 1, 1, 1];
-console.log(countOccurences(numbers, 1));
+// const numbers = [2, 3, 4, 5, 1, 1, 1];
+// console.log(countOccurences(numbers, 1));
+
+// get max
+function GetMax(array) {
+    if(array.length === 0)
+        return undefined;
+    return array.reduce((accumulator, occurance) => 
+        (accumulator > occurance) ? accumulator : occurance);
+}
+const numbers = [2, 3, 4, 5, 1, 6, 1];
+console.log(GetMax(numbers));
