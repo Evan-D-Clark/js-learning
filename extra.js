@@ -122,3 +122,19 @@
 // }
 // console.log(circle.area);
 
+// count occurences with error handling
+function countOccurences(array, searchElement) {
+    if(!Array.isArray(array))
+        throw new Error('First argument must be an array.');
+    return array.reduce((accumulator, current) => {
+        const occurance = (current === searchElement) ? 1 : 0;
+        return accumulator + occurance;
+    }, 0);
+}
+
+try {
+console.log(countOccurences(true, 1));
+}
+catch(e) {
+    alert(e);
+}
